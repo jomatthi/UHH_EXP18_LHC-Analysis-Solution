@@ -16,7 +16,11 @@ class FourMomentum(object):
         """
         # Exercise 1.1 Adding four-momenta:
         # this part needs to be implemented
-        pass
+        px_sum = self.px + other.px
+        py_sum = self.py + other.py
+        pz_sum = self.pz + other.pz
+        E_sum = self.E + other.E
+        return FourMomentum(px_sum, py_sum, pz_sum, E_sum)
 
     def __mul__(self, other):
         """
@@ -32,6 +36,7 @@ class FourMomentum(object):
 
             # Exercise 1.2 invariant mass:
             # this part needs to be implemented
+            result = self.E*other.E - self.px*other.px - self.py*other.py - self.pz*other.pz
             return result
 
         # check if is multiplied with number

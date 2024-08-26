@@ -95,7 +95,7 @@ class DefaultHistograms(Histograms):
 
 class TopMassHist(Histograms):
     def __init__(self, name):
-        self.hists = OrderedDict([('top_mass', TH1F('top_mass',';M_{T}', 60,0,300)),
+        self.hists = OrderedDict([('top_mass', TH1F('top_mass',';M_{T}', 120,0,300)),
                                   ])
         ## DO NOT TOUCH THIS PART ##
         name = name + "_default"
